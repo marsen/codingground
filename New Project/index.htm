@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>ZipCode</title>
+        <style type="text/css">
+        html *{ margin:0px; padding:0; outline: none; position: relative;}
+        .sb-02{width: 24px;height: 19px;background: url(icon-02.png) no-repeat -19px 2px;text-indent: -9999px;border: 1px solid #ccc;margin-left: -4px;top: 4px;}
+        .sb-02:hover{background: url(icon-02.png) no-repeat -19px -18px}
+        .zipCode{width:50px;margin-top: 4px;margin-left:10px;float:left;}
+        .codeUl{width: 100px; max-height: 250px; overflow:scroll; overflow-x:hidden; border:1px solid #CCC; background:white; z-index:1;position:absolute;z-index: 100;}
+        .codeUl li{padding:6px; font-size:13px;width: 71px;}
+        .codeDiv{float:left; margin-left:10px;}
+        .dataText{width: 75px;}
+        .zipSpan{float:left;margin:5px 0px 0px 10px;}
+    </style>
+	</head>
+	<body>
+    <input type="text" id="zipCode" disabled="disabled" class="zipCode"/>
+    <span class="zipSpan">郵遞區號</span>
+    <div class="codeDiv">
+        <input id="cityText" type="text" value="縣市" disabled="disabled" class="dataText"/>
+        <input id="cityBt" type="button" class="sb-02"/>
+        縣/市
+        <ul id="cityUl" class="codeUl">
+            <li>臺北市</li>	
+            <li>基隆市</li>
+            <li>新北市</li>	
+            <li>宜蘭縣</li> 
+            <li townId="300">新竹市</li> 	 
+            <li>新竹縣</li>
+            <li>桃園縣</li>
+            <li>苗栗縣</li> 
+            <li>臺中市</li> 
+            <li>彰化縣</li> 
+            <li>南投縣</li> 
+            <li townId="600">嘉義市</li>   
+            <li>嘉義縣</li>  
+            <li>雲林縣</li>  
+            <li>臺南市</li>  
+            <li>高雄市</li> 
+            <li>南海諸島</li>
+            <li>澎湖縣</li>
+            <li>屏東縣</li>
+            <li>臺東縣</li>
+            <li>花蓮縣</li>
+            <li>金門縣</li>
+            <li>連江縣</li> 
+        </ul>
+    </div>    
+    <div id="townDiv" class="codeDiv">
+        <input id="townText" type="text" value="鄉鎮市區" disabled="disabled" class="dataText"/>
+        <input id="townBt" type="button" class="sb-02"/>
+        鄉/鎮/市/區
+        <ul id="townUl" class="codeUl">
+        </ul>
+    </div>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="zipcode.js" type="text/javascript"></script>
+	</body>
+</html>
